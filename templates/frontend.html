@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Speech Translator</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Speech Translator using Whisper</h1>
+
+<h2>Voice to Text</h2>
+
+<input type="file" id="audioFile">
+
+<button onclick="uploadAudio()">
+    Convert Speech
+</button>
+
+<textarea id="speechResult"></textarea>
+
+<hr>
+
+<h2>Text to Speech</h2>
+
+<textarea id="inputText"></textarea>
+
+<select id="language">
+
+<option value="en">English</option>
+<option value="ta">Tamil</option>
+<option value="hi">Hindi</option>
+<option value="te">Telugu</option>
+<option value="ml">Malayalam</option>
+<option value="kn">Kannada</option>
+
+</select>
+
+<button onclick="convertText()">
+    Speak
+</button>
+
+<br><br>
+
+<audio controls id="audioPlayer"></audio>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
