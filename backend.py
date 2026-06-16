@@ -9,7 +9,7 @@ UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Load Whisper model once
-model = whisper.load_model("base")
+model = whisper.load_model("tiny")
 
 @app.route('/')
 def home():
@@ -61,7 +61,7 @@ def text_to_speech():
     )
 
 
-import webbrowser
+
 
 import os
 
